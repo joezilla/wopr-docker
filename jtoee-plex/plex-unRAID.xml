@@ -10,9 +10,9 @@
   <Support>https://forums.plex.tv/categories/docker</Support>
   <Description>
     [b]Plex Media Server[/b][br][br]
- 
+
     Enjoy your media on all your devices.[br]
-    All your movie, TV Show, music, and photo collections at your fingertips, anywhere you go on all the devices you love. 
+    All your movie, TV Show, music, and photo collections at your fingertips, anywhere you go on all the devices you love.
   </Description>
   <Project>https://plex.tv/</Project>
   <Registry>https://github.com/joezilla/wopr-docker/</Registry>
@@ -53,7 +53,7 @@
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/movies<HostDir>
+      <HostDir>/mnt/user/movies</HostDir>
       <ContainerDir>/storage/videos</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -67,7 +67,6 @@
       <ContainerDir>/storage/tshows</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
-
   </Data>
 <WebUI>http://[IP]:[PORT:32400]/web</WebUI>
 <Icon>https://raw.githubusercontent.com/plexinc/pms-docker/master/img/plex-server.png</Icon>
