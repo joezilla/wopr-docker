@@ -16,7 +16,7 @@
   </Description>
   <Project>https://plex.tv/</Project>
   <Registry>https://github.com/joezilla/wopr-docker/</Registry>
-  <Repository>joezilla/wopr-docker</Repository>
+  <Repository>joezilla/wopr-plex</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Environment>
