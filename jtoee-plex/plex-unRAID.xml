@@ -15,7 +15,7 @@
     All your movie, TV Show, music, and photo collections at your fingertips, anywhere you go on all the devices you love. 
   </Description>
   <Project>https://plex.tv/</Project>
-  <Registry>https://hub.docker.com/r/plexinc/pms-docker/</Registry>
+  <Registry>https://github.com/joezilla/wopr-docker/</Registry>
   <Repository>joezilla/wopr-docker</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
@@ -43,20 +43,31 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir></HostDir>
+      <HostDir>/mnt/user/appdata/plex-jtoee</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir></HostDir>
+      <HostDir>/tmp/transcode</HostDir>
       <ContainerDir>/transcode</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir></HostDir>
-      <ContainerDir>/data</ContainerDir>
+      <HostDir>/mnt/user/movies<HostDir>
+      <ContainerDir>/storage/videos</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
+    <Volume>
+      <HostDir>/mnt/user/music</HostDir>
+      <ContainerDir>/storage/music</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/tvshows</HostDir>
+      <ContainerDir>/storage/tshows</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+
   </Data>
 <WebUI>http://[IP]:[PORT:32400]/web</WebUI>
 <Icon>https://raw.githubusercontent.com/plexinc/pms-docker/master/img/plex-server.png</Icon>
