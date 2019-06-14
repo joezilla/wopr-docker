@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Beta>False</Beta>
+  <Category>MediaServer:Video MediaServer:Music MediaServer:Photos</Category>
+  <Date>2017-01-30</Date>
+  <Changes>
+  </Changes>
+  <Name>Couchpotato Movies</Name>
+  <Support></Support>
+  <Description>
+  </Description>
+  <Project>https://plex.tv/</Project>
+  <Registry>https://github.com/joezilla/wopr-couchpotato/</Registry>
+  <Repository>joezilla/wopr-couchpotato</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+  </Environment>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/couchpotato-jtoee</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/downloads</HostDir>
+      <ContainerDir>/storage/downloads</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/movies</HostDir>
+      <ContainerDir>/storage/videos</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/music</HostDir>
+      <ContainerDir>/storage/music</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/tvshows</HostDir>
+      <ContainerDir>/storage/tshows</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+<WebUI>http://[IP]:[PORT:5050]/</WebUI>
+<Icon>https://couchpota.to/media/images/favicon.ico</Icon>
+<ExtraParams></ExtraParams>
+</Container>
