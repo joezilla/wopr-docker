@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Beta>False</Beta>
+  <Category>MediaServer:Video MediaServer:Music MediaServer:Photos</Category>
+  <Date>2017-01-30</Date>
+  <Changes>
+  </Changes>
+  <Name>SABNZBD Downloads</Name>
+  <Support></Support>
+  <Description>
+  </Description>
+  <Project>https://plex.tv/</Project>
+  <Registry>https://github.com/joezilla/wopr-docker/</Registry>
+  <Repository>joezilla/wopr-sabnzbd</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+  </Environment>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/sabnzbd-jtoee</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/downloads</HostDir>
+      <ContainerDir>/storage/downloads</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+<WebUI>http://[IP]:[PORT:9090]/web</WebUI>
+<Icon>https://sabnzbd.org/images/favicon.ico</Icon>
+<ExtraParams></ExtraParams>
+</Container>

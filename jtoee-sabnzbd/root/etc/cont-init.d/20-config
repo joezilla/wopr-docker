@@ -1,0 +1,12 @@
+#!/usr/bin/with-contenv bash
+
+# make folders
+mkdir -p \
+	/storage/downloads \
+	/storage/incomplete \
+	/storage/complete
+
+  permissions
+chown -R abc:abc \
+	/storage/downloads 
+
