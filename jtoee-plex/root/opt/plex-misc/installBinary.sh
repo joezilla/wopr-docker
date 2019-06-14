@@ -3,6 +3,7 @@
 . /plex-common.sh
 
 echo "${TAG}" > /version.txt
+echo "Installing ${TAG}"
 if [ ! -z "${URL}" ]; then
   echo "Attempting to install from URL: ${URL}"
   installFromRawUrl "${URL}"

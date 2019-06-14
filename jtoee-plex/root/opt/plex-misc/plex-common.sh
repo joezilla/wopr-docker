@@ -29,6 +29,8 @@ function getVersionInfo {
   # Get update info from the XML.  Note: This could countain multiple updates when user specifies an exact version with the lowest first, so we'll use first always.
   remoteVersion=$(echo "${versionInfo}" | sed -n 's/.*Release.*version="\([^"]*\)".*/\1/p')
   remoteFile=$(echo "${versionInfo}" | sed -n 's/.*file="\([^"]*\)".*/\1/p')
+
+  echo ">> remoteVersion = ${remoteVersion}, remoteFile = ${remoteFile}"
 }
 
 
@@ -38,6 +40,7 @@ function installFromUrl {
 
 function installFromRawUrl {
   local remoteFile="$1"
+  echo "**** downloading ${remoteFile}"
   curl -J -L -o /tmp/plexmediaserver.deb "${remoteFile}"
   local last=$?
 

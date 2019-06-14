@@ -13,7 +13,10 @@ RUN \
     apt-get install -y \
       tzdata \
       curl \
+      sudo \
+      git \
       xmlstarlet \
+      wget \
       uuid-runtime \
       unrar \
     && \
@@ -44,13 +47,14 @@ VOLUME /config /transcode /storage/tvshows /storage/movies /storage/music
 ENV CHANGE_CONFIG_DIR_OWNERSHIP="true" \
     HOME="/config"
 
-ARG TAG=beta
+ARG TAG=public
 ARG URL=
 
 COPY root/ /
 
-RUN \
+RUN /opt/plexupdate/plexupdate.sh
+# RUN \
 # Save version and install
-    /installBinary.sh
+#    /installBinary.sh
 
 HEALTHCHECK --interval=5s --timeout=2s --retries=20 CMD /healthcheck.sh || exit 1
