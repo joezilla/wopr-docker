@@ -31,8 +31,23 @@
       <ContainerDir>/storage/downloads</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
+    <Volume>
+      <HostDir>/mnt/user/movies</HostDir>
+      <ContainerDir>/storage/videos</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/music</HostDir>
+      <ContainerDir>/storage/music</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/tvshows</HostDir>
+      <ContainerDir>/storage/tshows</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
   </Data>
-<WebUI>http://[IP]:[PORT:9090]/web</WebUI>
+<WebUI>http://[IP]:[PORT:8080]/</WebUI>
 <Icon>https://sabnzbd.org/images/favicon.ico</Icon>
 <ExtraParams></ExtraParams>
 </Container>
