@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Beta>False</Beta>
+  <Category>MediaServer:Video MediaServer:Music MediaServer:Photos</Category>
+  <Date>2017-01-30</Date>
+  <Changes>
+  </Changes>
+  <Name>SONARR TV Shows</Name>
+  <Support></Support>
+  <Description>
+  </Description>
+  <Project>https://plex.tv/</Project>
+  <Registry>https://github.com/joezilla/wopr-docker/</Registry>
+  <Repository>joezilla/wopr-sabnzbd</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+  </Environment>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/sonarr-jtoee</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/downloads</HostDir>
+      <ContainerDir>/storage/downloads</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/tvshows</HostDir>
+      <ContainerDir>/storage/tshows</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+<WebUI>http://[IP]:[PORT:8989]/</WebUI>
+<Icon>https://sonarr.tv/img/favicon.ico</Icon>
+<ExtraParams></ExtraParams>
+</Container>
