@@ -33,7 +33,7 @@
     </Volume>
     <Volume>
       <HostDir>/mnt/user/tvshows</HostDir>
-      <ContainerDir>/storage/tshows</ContainerDir>
+      <ContainerDir>/storage/tvshows</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
