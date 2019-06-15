@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Beta>False</Beta>
+  <Category>MediaServer:Video MediaServer:Music MediaServer:Photos</Category>
+  <Date>2017-01-30</Date>
+  <Changes>
+  </Changes>
+  <Name>nginx web server</Name>
+  <Support></Support>
+  <Description>
+  </Description>
+  <Project>https://nginx.org/</Project>
+  <Registry>https://github.com/joezilla/wopr-nginx/</Registry>
+  <Repository>nginx</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+  </Environment>
+  <Networking>
+    <Mode>Custom: br0</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/nginx</HostDir>
+      <ContainerDir>/usr/share/nginx/html</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+<WebUI>http://[IP]:[PORT:80]/</WebUI>
+<Icon>https://www.nginx.com/wp-content/uploads/2019/01/nginx-favicon.png</Icon>
+<ExtraParams></ExtraParams>
+</Container>
