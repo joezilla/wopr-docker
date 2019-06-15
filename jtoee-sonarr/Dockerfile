@@ -40,4 +40,4 @@ COPY root/ /
 
 # ports and volumes
 EXPOSE 8989
-VOLUME /config /storate/downloads /storage/tvshows
+VOLUME /config /storage/downloads /storage/tvshows
