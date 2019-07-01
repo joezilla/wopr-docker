@@ -52,7 +52,7 @@ ARG URL=
 
 COPY root/ /
 
-RUN /opt/plexupdate/plexupdate.sh
+RUN /opt/plexupdate/plexupdate.sh -a
 # RUN \
 # Save version and install
 #    /installBinary.sh
