@@ -3,6 +3,7 @@ FROM ubuntu:18.04
 # ARG S6_OVERLAY_VERSION=v1.17.2.0
 ARG S6_OVERLAY_VERSION=v1.22.1.0
 ARG DEBIAN_FRONTEND="noninteractive"
+ARG PLEX_TOKEN=""
 ENV TERM="xterm" LANG="C.UTF-8" LC_ALL="C.UTF-8"
 
 ENTRYPOINT ["/init"]
@@ -45,14 +46,16 @@ EXPOSE 32400/tcp 3005/tcp 8324/tcp 32469/tcp 1900/udp 32410/udp 32412/udp 32413/
 VOLUME /config /transcode /storage/tvshows /storage/movies /storage/music
 
 ENV CHANGE_CONFIG_DIR_OWNERSHIP="true" \
-    HOME="/config"
+    HOME="/config" \
+    PLEX_TOKEN=$PLEX_TOKEN 
 
 ARG TAG=public
 ARG URL=
 
 COPY root/ /
 
-RUN /opt/plexupdate/plexupdate.sh -a
+# RUN envsubst < /etc/plexupdate.conf.template > /etc/plexupdate.conf
+RUN /opt/plexupdate/plexupdate.sh -a --token=$PLEX_TOKEN
 # RUN \
 # Save version and install
 #    /installBinary.sh

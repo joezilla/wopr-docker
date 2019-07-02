@@ -1,3 +1,3 @@
 
 docker build -t joezilla/wopr-plex . && \
-docker push joezilla/wopr-plex:latest
+# docker push joezilla/wopr-plex:latest
