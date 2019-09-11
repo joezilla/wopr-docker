@@ -54,6 +54,9 @@ ARG URL=
 
 COPY root/ /
 
+# cache bust
+ARG CACHEBUST=1
+
 # RUN envsubst < /etc/plexupdate.conf.template > /etc/plexupdate.conf
 RUN /opt/plexupdate/plexupdate.sh -a --token=$PLEX_TOKEN
 # RUN \
