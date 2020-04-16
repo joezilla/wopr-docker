@@ -5,7 +5,7 @@
   <Date>2017-01-30</Date>
   <Changes>
   </Changes>
-  <Name>RADARR Movies< /Name>
+  <Name>RADARR Movies</Name>
   <Support></Support>
   <Description>
   </Description>
@@ -22,7 +22,7 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/radarr-jtoee</HostDir>
+      <HostDir>/mnt/user/appdata/radarr</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -32,12 +32,12 @@
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/tvshows</HostDir>
-      <ContainerDir>/storage/tvshows</ContainerDir>
+      <HostDir>/mnt/user/movies</HostDir>
+      <ContainerDir>/storage/movies</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
-<WebUI>http://[IP]:[PORT:8989]/</WebUI>
+<WebUI>http://[IP]:[PORT:7878]/</WebUI>
 <Icon>https://raw.githubusercontent.com/Radarr/radarr.github.io/master/img/favicon.ico</Icon>
 <ExtraParams></ExtraParams>
 </Container>
