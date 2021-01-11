@@ -22,7 +22,7 @@ RUN \
 	| jq -r '.[0] | .tag_name'); \
  fi && \
  radarr_url=$(curl -s https://api.github.com/repos/Radarr/Radarr/releases/tags/"${RADARR_RELEASE}" \
-	|jq -r '.assets[].browser_download_url' |grep linux) && \
+	|jq -r '.assets[].browser_download_url' |grep linux-core-x64) && \
  mkdir -p \
 	/app/radarr/bin && \
  curl -o \
