@@ -40,6 +40,9 @@ RUN \
 # add local files
 COPY /root /
 
+# cache bust
+ARG CACHEBUST=1
+
 # ports and volumes
 EXPOSE 7878
 VOLUME /config /storage/downloads /storage/tvshows
